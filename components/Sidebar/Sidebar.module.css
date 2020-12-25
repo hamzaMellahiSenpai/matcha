@@ -1,0 +1,5 @@
+
+.activeTab {
+  @apply bg-white p-2 rounded;
+}
+
