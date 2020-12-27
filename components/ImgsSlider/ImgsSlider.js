@@ -1,10 +1,38 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
+// import {TweenMax} from "gsap";
 
-const ImgsSlider = () => {
-  let distance = 50;
-  return (
-    <>
+export class ImgsSlider extends Component {
+  state = {
+    distance : 30
+  }
+  componentDidMount()
+  {
+    var heart = document.getElementById("test");
+
+
+  
+  // TweenMax.fromTo(heart,.6,
+  //   {
+  //     visible:true,
+  //     scale:1
+  //   },
+  //   {
+  //     scale:1.4,
+  //     repeat: -1,
+  //     //ease: RoughEase.ease,
+  //     //ease: Elastic.easeOut,
+  //     //ease: Elastic.easeOut.config(1.75, 1),
+  //     yoyo: true
+  // });
+  
+  }
+
+
+  render() {
+    let {distance} = this.state;
+    return (
+      <>
       <div
         style={{
           backgroundImage: "url(girl.jfif)",
@@ -46,6 +74,7 @@ const ImgsSlider = () => {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   width="50"
+                  className="heart"
                 >
                   <path
                     strokeLinecap="round"
@@ -111,102 +140,12 @@ const ImgsSlider = () => {
           </div>
         </div>
       </div>
-      {/* <div className="grid grid-cols-13 -mt-24 ">
-        <div className="flex text-white text-bold -mt-96 ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            width="50"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"
-            />
-          </svg>
-          {distance}km
-        </div>
-        <div className="col-start-2 col-end-3 ">
-          <button className="text-grey-main bg-white p-2 text-gray-50 rounded">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              width="50"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-        </div>
-        <div className="col-start-5 col-end-6 ">
-          <button className=" bg-pink-main p-2 text-gray-50 rounded">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              width="50"
-            >
-              <path
-                fillRule="evenodd"
-                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </button>
-        </div>
-        <div className="col-start-6 col-end-7 ">
-          <button className=" bg-orange-main p-2 text-gray-50 rounded">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              width="50"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        </div>
-        <div className="col-end-10  ">
-          <button className="text-grey-main bg-white p-2 text-gray-50 rounded">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              width="50"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div> */}
-    </>
-  );
-};
+      </>
+    )
+  }
+}
 
 ImgsSlider.propTypes = {};
 
 ImgsSlider.defaultProps = {};
-
-export default ImgsSlider;
+export default ImgsSlider

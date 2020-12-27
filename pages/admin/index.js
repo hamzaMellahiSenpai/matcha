@@ -109,7 +109,7 @@ export default function Dashboard() {
   return (
     <>
       <Sidebar />
-      <div className="relative md:ml-64 bg-gray-200 h-screen">
+      <div className="relative md:ml-64 bg-gray-200 min-h-screen	">
         <Navbar />
         {/* Header */}
         <div className="relative bg-pink-600 md:pt-32 pb-32 pt-12">
@@ -282,7 +282,7 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </div>
     </>

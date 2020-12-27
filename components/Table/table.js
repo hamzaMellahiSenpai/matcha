@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import DropDown from "../DropDown";
 
 export default function table({ data }) {
   let { cols, title, rows, moreBtnLink, actions } = data;
@@ -38,7 +39,7 @@ export default function table({ data }) {
                 </th>
               ))}
               {actions && (
-                <th className="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
+                <th className="px-1 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
                   actions
                 </th>
               )}
@@ -93,40 +94,9 @@ export default function table({ data }) {
                   </th>
                 ))}
                 {}
-                {/* <th className="border-t-0 border-l-0 border-r-0 text-xs  p-4">
-                  <div className="bg-green-500 rounded-full flex p-3 text-white w-12">
-                    <svg
-                      class="w-6 h-6 flex "
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div className="bg-red-600 rounded-full flex p-3 text-white w-12">
-                    <svg
-                      class="w-6 h-6 flex"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-                      ></path>
-                    </svg>
-                  </div>
-                </th> */}
+                <th className="border-t-0 border-l-0 border-r-0 text-xs  p-4">
+                  <DropDown list={actions}/>
+                </th>
               </tr>
             ))}
           </tbody>

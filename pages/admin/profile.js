@@ -97,7 +97,7 @@ export default function Users() {
   return (
     <>
       <Sidebar />
-      <div className="relative md:ml-64 bg-gray-200 ">
+      <div className="relative md:ml-64 bg-gray-200 min-h-screen	">
         <Navbar />
         <div className="relative bg-green-600 md:pt-32 pb-12 pt-12 mb-0 px-10 text-white flex">
           <i className="fa fa-cog fa-3x"></i>
@@ -112,7 +112,7 @@ export default function Users() {
               <CardProfile />
             </div>
           </div>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </div>
     </>
